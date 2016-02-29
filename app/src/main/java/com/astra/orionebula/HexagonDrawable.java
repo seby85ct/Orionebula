@@ -47,11 +47,13 @@ public class HexagonDrawable extends Drawable {
     protected void onBoundsChange(Rect bounds) {
         super.onBoundsChange(bounds);
         computeHex(bounds);
+
         invalidateSelf();
     }
 
     public void computeHex(Rect bounds) {
 
+        setBounds(bounds);
         final int width = bounds.width();
         final int height = bounds.height();
         final int size = Math.min(width, height);

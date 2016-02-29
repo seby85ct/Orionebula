@@ -20,50 +20,19 @@ import android.widget.LinearLayout;
 
 public class MainActivity extends Activity {
 
-    CustomDrawableView mCustomDrawableView;
-
-//    LinearLayout mLinearLayout;
+        CustomDrawableView mCustomDrawableView;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-        // Create a LinearLayout in which to add the ImageView
-//        mLinearLayout = new LinearLayout(this);
-
-
-//        HexagonDrawable myImage = new HexagonDrawable(60000);
-//        myImage.computeHex(new Rect(10, 10, 30, 40));
-        // Instantiate an ImageView and define its properties
-//        ImageView i = new ImageView(this);
-        //i.setImageDrawable(myImage);
-//        i.setAdjustViewBounds(true); // set the ImageView bounds to match the Drawable's dimensions
-//        LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
-//        i.setLayoutParams(layoutParams);
-
-        // Add the ImageView to the layout and set the layout as the content view
- //       mLinearLayout.addView(i);
         mCustomDrawableView = new CustomDrawableView(this);
-
-        setContentView(mCustomDrawableView);
-
-    }
-
-
-
-   /* @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-//        setContentView(R.layout.activity_main);
-
-        mCustomDrawableView = new CustomDrawableView(this);
-
         setContentView(mCustomDrawableView);
     }
-*/
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_main, menu);
+        menu.add(0, 0, 0, "Esagono");
         return true;
     }
 
